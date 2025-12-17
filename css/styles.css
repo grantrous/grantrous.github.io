@@ -10970,3 +10970,12 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+@media (max-width: 991.98px) {
+  #sideNav .navbar-brand .img-profile {
+    max-width: 4.5rem;    /* ~72px */
+    max-height: 4.5rem;   /* keeps it square */
+    width: 4.5rem;
+    height: 4.5rem;
+    border: 0.25rem solid rgba(255, 255, 255, 0.18);
+  }
+}
