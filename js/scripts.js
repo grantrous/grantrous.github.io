@@ -32,3 +32,39 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+/*
+  Automatically add/remove the `breakout` class on `.pdf-embed.pdf-wide`
+  when the viewport is large enough so the resume can expand full-bleed.
+*/
+(function () {
+  const BREAKPOINT = 1200; // px — use >= 1200 for 'xl' and up
+
+  function debounce(fn, ms = 120) {
+    let t;
+    return function (...args) {
+      clearTimeout(t);
+      t = setTimeout(() => fn.apply(this, args), ms);
+    };
+  }
+
+  function updatePdfBreakout() {
+    const elems = document.querySelectorAll('.pdf-embed.pdf-wide');
+    elems.forEach(el => {
+      if (window.innerWidth >= BREAKPOINT) {
+        el.classList.add('breakout');
+      } else {
+        el.classList.remove('breakout');
+      }
+    });
+  }
+
+  // Initialize on load
+  document.addEventListener('DOMContentLoaded', updatePdfBreakout);
+  // Also run immediately in case DOMContentLoaded already fired
+  updatePdfBreakout();
+
+  // Update on resize/orientation change (debounced)
+  window.addEventListener('resize', debounce(updatePdfBreakout));
+  window.addEventListener('orientationchange', debounce(updatePdfBreakout));
+})();
