@@ -38,7 +38,7 @@ window.addEventListener('DOMContentLoaded', event => {
   when the viewport is large enough so the resume can expand full-bleed.
 */
 (function () {
-  const BREAKPOINT = 1200; // px — use >= 1200 for 'xl' and up
+  const BREAKPOINT = 992; // px — use >= 992 (md/lg) so typical desktops expand the resume
 
   function debounce(fn, ms = 120) {
     let t;
