@@ -11157,22 +11157,24 @@ section.resume-section .resume-section-content {
     /* Larger embeds on desktop for better readability */
     .pdf-embed.portrait {
       aspect-ratio: 2 / 3;
-      min-height: 70vh;
-      max-height: 90vh;
-      width: min(1100px, 90%);
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .pdf-embed.landscape {
-      aspect-ratio: 16 / 9;
+      height: min(85vh, 1100px);
       min-height: 70vh;
       max-height: 90vh;
       width: min(1200px, 95%);
       margin-left: auto;
       margin-right: auto;
     }
+    .pdf-embed.landscape {
+      aspect-ratio: 16 / 9;
+      height: min(80vh, 1200px);
+      min-height: 70vh;
+      max-height: 90vh;
+      width: min(1400px, 98%);
+      margin-left: auto;
+      margin-right: auto;
+    }
     .pdf-toolbar { display: flex; }
-    .pdf-embed { box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
+    .pdf-embed { box-shadow: 0 6px 24px rgba(0,0,0,0.12); }
   }
 
   .navbar-toggler:focus .mobile-toggler-img,
