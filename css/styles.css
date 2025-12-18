@@ -11173,6 +11173,29 @@ section.resume-section .resume-section-content {
       margin-left: auto;
       margin-right: auto;
     }
+
+    /* Explicit breakout for the resume (only) so it uses viewport width and appears larger */
+    .pdf-embed.pdf-wide.portrait {
+      width: min(1500px, 96vw);
+      max-width: none;
+      height: min(92vh, 1200px);
+      min-height: 75vh;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      z-index: 20;
+    }
+    .pdf-embed.pdf-wide.landscape {
+      width: min(1600px, 98vw);
+      max-width: none;
+      height: min(86vh, 1200px);
+      min-height: 75vh;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      z-index: 20;
+    }
+
     .pdf-toolbar { display: flex; }
     .pdf-embed { box-shadow: 0 6px 24px rgba(0,0,0,0.12); }
   }
