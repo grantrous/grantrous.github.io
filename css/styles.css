@@ -10978,4 +10978,20 @@ section.resume-section .resume-section-content {
     height: 4.5rem;
     border: 0.25rem solid rgba(255, 255, 255, 0.18);
   }
+
+  /* Make the navbar toggler less obtrusive on small screens (removes empty square look) */
+  .navbar-toggler {
+    border: none;
+    background: transparent;
+    padding: 0.25rem 0.5rem;
+  }
+  .navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+  }
+  .navbar-toggler-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    background-size: 1.25rem 1.25rem;
+  }
 }
