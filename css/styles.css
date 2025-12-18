@@ -11196,6 +11196,22 @@ section.resume-section .resume-section-content {
       z-index: 20;
     }
 
+    /* Full-bleed breakout so the resume can use the full viewport on very large screens */
+    .pdf-embed.pdf-wide.breakout.portrait,
+    .pdf-embed.pdf-wide.breakout.landscape {
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      width: 100vw;
+      max-width: 100vw;
+      height: 92vh;
+      min-height: 75vh;
+      z-index: 9999; /* sit above the layout */
+      box-shadow: 0 10px 40px rgba(0,0,0,0.18);
+    }
+
     .pdf-toolbar { display: flex; }
     .pdf-embed { box-shadow: 0 6px 24px rgba(0,0,0,0.12); }
   }
