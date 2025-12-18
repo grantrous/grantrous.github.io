@@ -11001,12 +11001,16 @@ section.resume-section .resume-section-content {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-left: 0;      /* align to the left on mobile */
+    /* keep a comfortable offset from the viewport edge and respect safe area on iOS */
+    margin-left: max(0.5rem, env(safe-area-inset-left));
     margin-right: auto;
+    margin-top: max(0.5rem, env(safe-area-inset-top));
     padding: 0.125rem 0.5rem; /* small horizontal padding for touch */
     flex: 0 0 auto;
     background: transparent;
     border: none;
+    position: relative;
+    z-index: 1030; /* ensure it sits above page content */
   }
 
   .mobile-toggler-img {
