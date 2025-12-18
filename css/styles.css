@@ -11093,6 +11093,49 @@ section.resume-section .resume-section-content {
     vertical-align: middle;
   }
 
+  /* Responsive PDF embed styles */
+  .pdf-embed {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 3 / 4; /* portrait by default */
+    height: auto;
+    min-height: 40vh;
+    max-height: 75vh;
+    overflow: hidden;
+    border: 1px solid var(--bs-border-color);
+    border-radius: .25rem;
+    background: var(--bs-light);
+  }
+
+  .pdf-embed.landscape {
+    aspect-ratio: 16 / 9; /* for posters */
+  }
+
+  .pdf-embed.portrait {
+    aspect-ratio: 3 / 4;
+  }
+
+  .pdf-embed embed,
+  .pdf-embed object,
+  .pdf-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+
+  .pdf-fallback {
+    font-size: .9rem;
+    margin: .5rem;
+  }
+
+  @media (max-width: 576px) {
+    .pdf-embed {
+      max-height: 70vh;
+      aspect-ratio: 2 / 3;
+    }
+  }
+
   .navbar-toggler:focus .mobile-toggler-img,
   .navbar-toggler:focus {
     box-shadow: none;
