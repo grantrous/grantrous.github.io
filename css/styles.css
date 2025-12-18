@@ -10994,4 +10994,19 @@ section.resume-section .resume-section-content {
     height: 1.25rem;
     background-size: 1.25rem 1.25rem;
   }
+
+  /* Style the mobile profile image used as the toggler */
+  .mobile-toggler-img {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .navbar-toggler:focus .mobile-toggler-img,
+  .navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+  }
 }
