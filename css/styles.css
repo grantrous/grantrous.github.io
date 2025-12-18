@@ -10996,12 +10996,25 @@ section.resume-section .resume-section-content {
   }
 
   /* Style the mobile profile image used as the toggler */
+  .navbar-toggler {
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    padding: 0.125rem;
+    flex: 0 0 auto;
+    background: transparent;
+    border: none;
+  }
+
   .mobile-toggler-img {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 2.2rem;
+    height: 2.2rem;
     border-radius: 50%;
     object-fit: cover;
     display: block;
+    vertical-align: middle;
   }
 
   .navbar-toggler:focus .mobile-toggler-img,
