@@ -11001,8 +11001,9 @@ section.resume-section .resume-section-content {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-left: auto;
-    padding: 0.125rem;
+    margin-left: 0;      /* align to the left on mobile */
+    margin-right: auto;
+    padding: 0.125rem 0.5rem; /* small horizontal padding for touch */
     flex: 0 0 auto;
     background: transparent;
     border: none;
